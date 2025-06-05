@@ -621,6 +621,8 @@ li {
 -------------------- */
 
 .post-thumb img {
+    height: 35vh;
+    width: auto;
     border-radius: 30px;
     margin-bottom: 30px;
 }
