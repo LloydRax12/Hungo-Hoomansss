@@ -893,6 +893,18 @@ li {
   color: #b5aeba;
 }
 
+.popular-post-widget .head_text {
+  /* font-size: 40px; */
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  color: var(--title-color);
+}
+
+.popular-post-widget .widget-title {
+  margin-bottom: 16px;
+}
+
 .ig-thumb {
   display: inline-block;
 }
@@ -918,7 +930,7 @@ li {
 
 
 .card_wrapper {
-  padding: 10px 0;
+  padding: 0;
   /* smaller because it's inside a section already */
 }
 
@@ -1062,6 +1074,33 @@ li {
 
 .bg2 {
   background: #d05fa2 !important;
+}
+
+
+.card-cols>[class*="col-"] {
+  flex: 0 0 auto;
+}
+
+/* 1 card only → full width */
+.card-cols:has(> [class*="col-"]:first-child:last-child)>[class*="col-"] {
+  width: 60% !important;
+}
+
+/* exactly 2 cards → 50% each */
+.card-cols:has(> [class*="col-"]:nth-child(2)):not(:has(> [class*="col-"]:nth-child(3)))>[class*="col-"] {
+  width: 50%;
+}
+
+/* 3 or more cards → standard col-lg-4 (33.333%) */
+.card-cols:has(> [class*="col-"]:nth-child(3))>[class*="col-"] {
+  width: 33.3333%;
+}
+
+
+@media (max-width: 767px) {
+  .card-cols>[class*="col-"] {
+    width: 100% !important;
+  }
 }
 
 
@@ -1216,6 +1255,34 @@ li {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   transition: background 0.3s, transform 0.2s;
+}
+
+.mini-about-photo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.mini-about-photo {
+  width: 100%;
+  max-width: 360px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 767px) {
+  .mini-about-photo {
+    height: 280px;
+    max-width: 280px;
+  }
+
+  .mini-about-card {
+    text-align: center;
+  }
 }
 
 .mini-about-btn:hover {
