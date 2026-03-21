@@ -1175,6 +1175,60 @@ li {
   }
 }
 
+
+
+/* ===== Mini About Section (Landing Page) ===== */
+.mini-about-section {
+  background: #f9f7f4;
+  padding: 60px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mini-about-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.mini-about-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--dark-color);
+}
+
+.mini-about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.mini-about-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.mini-about-btn:hover {
+  background: var(--secondary-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Carousel people slides — keep image well-cropped */
+.welcome-slide-people img {
+  object-position: center top;
+}
+
 /***** End of Category filter area *****/
 
 /********** Top Header Area End *******/
@@ -1563,6 +1617,49 @@ li {
   display: grid;
   place-items: center;
 }
+
+/*=====About Gallery Section (About-Us Page)=====*/
+.about-gallery-section {
+  background: #fff;
+}
+
+.about-gallery-sub {
+  color: #777;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.about-gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 4 / 3;
+  background: #eee;
+}
+
+.about-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.about-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  .mini-about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-gallery-item {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* ===== End of new sections ===== */
 
 @media (max-width: 991px) {
   .about-collage .portrait.br {
